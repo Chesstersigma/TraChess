@@ -1,10 +1,32 @@
 // Simple Chess Game Script for TraChess
 // Mobile-friendly with touch support
-// Now with checkmate detection and opening names display
+// Now with checkmate detection, opening names display, and leaderboard drawer
 
 const chessboard = document.getElementById('chessboard');
 const statusDisplay = document.getElementById('status');
 const resetBtn = document.getElementById('resetBtn');
+
+// Hamburger/Leaderboard Drawer functionality
+const hamburger = document.getElementById('hamburger');
+const leaderboardDrawer = document.getElementById('leaderboardDrawer');
+const closeDrawer = document.getElementById('closeDrawer');
+
+hamburger.addEventListener('click', () => {
+    leaderboardDrawer.classList.add('open');
+});
+closeDrawer.addEventListener('click', () => {
+    leaderboardDrawer.classList.remove('open');
+});
+// Optional: close drawer when clicking outside it
+document.addEventListener('click', function(e) {
+    if (
+        leaderboardDrawer.classList.contains('open') &&
+        !leaderboardDrawer.contains(e.target) &&
+        !hamburger.contains(e.target)
+    ) {
+        leaderboardDrawer.classList.remove('open');
+    }
+});
 
 // Piece Unicode
 const pieces = {
