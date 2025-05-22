@@ -21,7 +21,6 @@
   <h1>TraChess</h1>
   <div id="board"></div>
 
-  <!-- Script order matters -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.12.0/chess.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"></script>
@@ -60,6 +59,7 @@
       onDragStart: onDragStart,
       onDrop: onDrop,
       onSnapEnd: onSnapEnd,
+      pieceTheme: 'https://cdn.jsdelivr.net/npm/chessboardjs@1.0.0/img/chesspieces/wikipedia/{piece}.png'
     });
   </script>
 </body>
