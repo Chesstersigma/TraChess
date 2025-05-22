@@ -7,6 +7,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+        <div class="leaderboard-drawer" id="leaderboardDrawer">
+            <div class="drawer-header">
+                <span>Leaderboard</span>
+                <button id="closeDrawer" aria-label="Close leaderboard">&times;</button>
+            </div>
+            <table id="leaderboard">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Username</th>
+                        <th>Title</th>
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <span class="dev-badge">DEV</span>
+                            <span class="username">Chesstersigma</span>
+                        </td>
+                        <td><span class="tm-badge">TM</span> TraChess Master</td>
+                        <td>3146</td>
+                    </tr>
+                    <!-- More players can be added here -->
+                </tbody>
+            </table>
+        </div>
+    </header>
     <h1>Welcome to TraChess</h1>
     <div class="chessboard" id="chessboard"></div>
     <div class="controls">
@@ -15,4 +46,4 @@
     </div>
     <script src="script.js"></script>
 </body>
-</html>
+    </html>
